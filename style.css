@@ -38,6 +38,7 @@ button {
     width: 100%;
     font-size: 16px;
     margin-top: 10px;
+    transition: background 0.3s ease-in-out;
 }
 
 button:hover {
@@ -60,4 +61,31 @@ button:hover {
     background: #fff;
     font-size: 16px;
     line-height: 1.5;
+    margin-top: 20px;
+}
+
+/* Стили для фото */
+.photo-preview, .resume-photo {
+    width: 90px;
+    height: 120px;
+    object-fit: cover;
+    border: 2px solid #007bff;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    display: block;
+    margin: 10px auto;
+}
+
+/* Стили для заголовка */
+h2 {
+    font-size: 22px;
+    color: #333;
+}
+
+/* Стили для input[type="file"] */
+input[type="file"] {
+    border: none;
+    background: none;
+    padding: 5px;
+    font-size: 14px;
 }
