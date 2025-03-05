@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Генератор резюме</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h2>Генератор резюме</h2>
+        <form id="resumeForm">
+            <input type="text" id="name" placeholder="Ваше имя" required>
+            <input type="text" id="position" placeholder="Желаемая должность" required>
+            <textarea id="experience" placeholder="Опыт работы" required></textarea>
+            <textarea id="education" placeholder="Образование" required></textarea>
+            <input type="email" id="email" placeholder="Ваш email для отправки" required>
+            <button type="button" onclick="generateResume()">Создать резюме</button>
+        </form>
+        
+        <h2>Результат</h2>
+        <div id="resumeOutput"></div>
+        <button class="download-btn" id="downloadBtn" style="display:none;" onclick="downloadPDF()">Скачать резюме (PDF)</button>
+        <button class="download-btn" id="emailBtn" style="display:none;" onclick="sendEmail()">Отправить на почту</button>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
