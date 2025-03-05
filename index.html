@@ -17,11 +17,19 @@
             <textarea id="experience" placeholder="Опыт работы" required></textarea>
             <textarea id="education" placeholder="Образование" required></textarea>
             <input type="email" id="email" placeholder="Ваш email для отправки" required>
+            
+            <!-- Поле для загрузки фото -->
+            <label for="photo">Загрузите фото 3x4:</label>
+            <input type="file" id="photo" accept="image/*">
+            <img id="photoPreview" class="photo-preview" alt="Фото" style="display:none;">
+
             <button type="button" onclick="generateResume()">Создать резюме</button>
         </form>
         
         <h2>Результат</h2>
-        <div id="resumeOutput"></div>
+        <div id="resumeOutput">
+            <img id="resumePhoto" class="resume-photo" style="display:none;">
+        </div>
         <button class="download-btn" id="downloadBtn" style="display:none;" onclick="downloadPDF()">Скачать резюме (PDF)</button>
         <button class="download-btn" id="emailBtn" style="display:none;" onclick="sendEmail()">Отправить на почту</button>
     </div>
